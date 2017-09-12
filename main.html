@@ -10,17 +10,16 @@
 	<div id="app">
 	<div class="field">
   		<div class="control">
-    			<input class="input" type="text" v-model="firstname">
+    			<input class="input" type="text" v-model="firstName">
   		</div>
 	</div>
 
-	<div class="field">
-  		<div class="control">
-    		<input class="input" type="email" v-model="lastname">
-  		</div>
+		 <p class="help" v-show="firstName !== ''">Nafnið þitt er: {{firstName}}</p>
+
+		 <p v-bind:id="'person_'+'id'">Þessi texti hefur Id</p>
+
 	</div>
-		 <p class="help">Nafnið þitt er: {{firstname}}  {{lastname}}</p>
-	</div>
+
 
 
 	<script src="https://unpkg.com/vue"></script>
@@ -28,10 +27,14 @@
 		var app = new Vue({
 			el: "#app",
 			data: {
-				firstname: "Milan",
-				lastname: "Ilievski"
+				firstName: "",
+				check: true,
+				id: 3
+
 			}
 		});
 	</script>
 </body>
 </html>
+
+
