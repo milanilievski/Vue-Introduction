@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div id="app">
+	<p v-for="item in land">{{ item.name }} ( {{ item.population }} )</p>
+</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#app",
+			data: {
+  				land: [
+  					{name:"Britain",population:28125458}, 
+  					{name:"USA",population:325365189}, 
+  					{name:"Australia",population:24652111}, 
+  					{name:"Sweden",population:9929399}
+  				]	
+			}
+		});
+	</script>
+</body>
+</html>

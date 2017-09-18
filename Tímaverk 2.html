@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<div id="app">
+	<p v-for="item in land">{{ item }}</p>
+	<p v-for="item in land1">{{ item.message }}</p>
+</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#app",
+			data: {
+  				land: ["Britain", "USA", "Australia", "Sweden"];
+  				land1: [
+	  				{ message: "Britain"}, 
+	  				{ message: "USA"}, 
+	  				{ message: "Australia"}, 
+	  				{ message: "Sweden"}
+  				]
+			}
+		});
+	</script>
+</body>
+</html>
